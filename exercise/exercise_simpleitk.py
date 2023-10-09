@@ -57,7 +57,7 @@ def register_images(img, label_img, atlas_img):
     # be careful with the interpolator type for label images!
     # hint: 'Resample' (with interpolator=sitkNearestNeighbor, defaultPixelValue=0.0,
     # outputPixelType=label_img.GetPixelIDValue())
-    registered_label = sitk.Resample(image1=label_img, referenceImage=atlas_img, interpolator=sitk.sitkNearestNeighbor,
+    registered_label = sitk.Resample(image1=label_img, referenceImage=atlas_img, transform=transform, interpolator=sitk.sitkNearestNeighbor,
                                      defaultPixelValue=0.0, outputPixelType=label_img.GetPixelIDValue())
 
     return registered_img, registered_label
