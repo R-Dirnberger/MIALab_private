@@ -147,7 +147,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '--tree_depth',
         type=int,
-        default=1,
+        default=11,
         help='Maximum depth of the trees in the random forest classifier.'
     )
 
